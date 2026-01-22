@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Arcane Duel</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+  <div class="arena">
+
+    <img src="assets/bg.jpg" id="background" alt="Background">
+    <div class="bg-overlay">
+
+      <h1 class="harry-text glow">Arcane Duel</h1>
+
+      <div id="sorting-ceremony" class="modal">
+  <div class="hat-box">
+    <svg viewBox="-20 0 190 190" xmlns="http://www.w3.org/2000/svg">
+      <g id="sorting-hat" class="tip">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M92.725 107.336L98.622 128.523L124.734 131.144C120.657 138.621 109.887 144.167 92.81 141.989C77.024 139.976 75.36 147.886 64.669 147.886C31.633 147.886 25.265 121.162 25.265 121.162L48.303 123.474L47.593 113.611C47.593 113.611 58.983 99.8691 61.687 75.8291C73.619 55.7251 97.903 59.2521 106.41 74.5771L92.454 74.9141C93.436 78.5241 89.467 81.8441 86.339 82.0621L90.17 93.0171L95.427 96.0381L84.127 104.39L85.11 107.583L92.725 107.336ZM67.027 92.4861L65.553 105.259L77.72 107.371L78.702 104.178L67.027 92.4861Z"
+          fill="#000000" />
+        <path class="mouth"
+          d="M60.216 120.873L61.275 123.108C75.458 123.108 82.881 119.968 82.881 119.968L91.439 123.697L92.406 122.221C86.693 111.924 71.258 112.566 60.216 120.873Z"
+          fill="#000000" />
+      </g>
+    </svg>
+
+    <p id="sorting-message">Let me see... where to put you...</p>
+    <button id="sort-button" onclick="startSortingCeremony()">Sort Me!</button>
+  </div>
+</div>
+
+
+
+
+
+      <button id="toggle-instructions" class="toggle-btn">Show Controls</button>
+
+      <div id="instructions-box" class="instructions-box">
+      <button id="close-instructions" class="close-btn">✖</button>
+      <h2>🕹️ Controls</h2>
+      <strong>Player 1</strong><br>
+      Move: Z (Left), X (Right)<br>
+      Q: Beam (1s CD)<br>
+      W: Lightning (3s CD)<br>
+      A: Shield (6s CD)<br>
+      E: Ultimate (8s CD)<br><br>
+
+      <strong>Player 2</strong><br>
+      Move: L (Left), J (Right)<br>
+      U: Beam (1s CD)<br>
+      I: Lightning (3s CD)<br>
+      O: Shield (6s CD)<br>
+      P: Ultimate (8s CD)
+    </div>
+    
+  
+      
+      <div id="cooldown-warning" class="cooldown-warning">Skill is on cooldown!</div>
+
+
+      <!-- Health and Mana Bars -->
+      <div class="status-bars">
+
+     <img id="house-crest-left" class="house-crest left" />
+
+
+        <div class="bar-box">
+          <div id="health-left" class="bar health"></div>
+          <div id="mana-left" class="bar mana"></div>
+        </div>
+        
+       <img id="house-crest-right" class="house-crest right" />
+        <div class="bar-box right">
+          <div id="health-right" class="bar health"></div>
+          <div id="mana-right" class="bar mana"></div>
+        </div>
+      </div>
+  
+
+
+
+  <div class="platform"></div>
+      <!-- Left wizard -->
+      <div class="caster left-caster">
+        <img src="assets/lower-left.svg" class="wizard" id="left-char" alt="Player 1">
+        <img src="assets/left-wand.svg" class="wand wand-left" alt="Wand Left">
+      </div>
+
+      <!-- Right wizard -->
+      <div class="caster right-caster">
+        <img src="assets/lower-left.svg" class="wizard" id="right-char" alt="Player 2">
+        <img src="assets/right-wand.svg" class="wand wand-right" alt="Wand Right">
+      </div>
+
+      <!-- Spells go here -->
+      <div id="spells"></div>
+
+       <button id="play-again" onclick="location.reload()">Play Again</button>
+
+      <!-- Controls -->
+      <div class="instructions">
+        made by Angel Mae L. Endoma BSIT
+      </div>
+    </div>
+    
+  </div>
+ 
+
+  <!-- 🎵 Audio elements -->
+  <audio id="audio-beam" src="assets/audios/beam.mp3" preload="auto"></audio>
+  <audio id="audio-lightning" src="assets/audios/beam.mp3" preload="auto"></audio>
+  <audio id="audio-ultimate" src="assets/audios/ultimate.mp3" preload="auto"></audio>
+  <audio id="audio-shield" src="assets/audios/shield.mp3" preload="auto"></audio>
+  <audio id="audio-hit" src="assets/audios/hit.mp3" preload="auto"></audio>
+  <audio id="audio-bg" src="assets/audios/background.mp3" loop preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
